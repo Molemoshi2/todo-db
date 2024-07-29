@@ -1,0 +1,108 @@
+.Main-container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.mini-container{
+    border: solid rgb(194, 190, 190) 2px;
+    padding: 6rem;
+    height: 40rem;
+    margin-top: 2rem;
+}
+hr{
+    margin-top: 2rem;
+}
+.form-btn-container{
+    display: flex;
+    gap: 10rem;
+    margin-top: 5rem;
+    
+}
+
+.add-btn{
+    width: 5rem;
+    border-radius: 1rem;
+    border-color: rgb(236, 235, 235);
+    cursor: pointer;
+
+}
+.Search-bar{
+    border: solid rgb(236, 235, 235) 2px;
+    width: 18rem;
+    padding-left: 2rem;
+    height: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.Search-bar input{
+    border: none;
+    outline: none;
+    flex: 1;
+}
+.Search-bar button{
+    border: none;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.Search-bar button img{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+/* working on the modal*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 3;
+    top: 4;
+    width: 30%;
+    height: max-content;
+    overflow: auto;
+    background-color: rgb(77, 76, 76);
+    color: white;
+    padding: 2rem;
+}
+/*Closing span*/
+.Close{
+    border: solid white 1px;
+    height: 1rem;
+    padding: 5px;
+    cursor: pointer;
+}
+.Close:hover{
+    background-color: rgb(170, 170, 170);
+}
+.closing{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.modal-input{
+    width: 40%;
+    height: 2rem;
+}
+select{
+    height: 2.35rem;
+    background-color: rgb(39, 38, 38);
+    color: white;
+}
+textarea{
+    width: 60%;
+    height: 7rem;
+    margin-bottom: 2rem;
+}
+.modal-add{
+    width: 60%;
+    background-color: black;
+    color: white;
+    height: 2rem;
+    cursor: pointer;
+}
+.modal-add:hover{
+    background-color: rgb(139, 137, 137);
+}
