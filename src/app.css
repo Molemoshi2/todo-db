@@ -57,14 +57,16 @@ hr{
     display: none;
     position: fixed;
     z-index: 1;
-    left: 3;
-    top: 4;
+    left: 2;
+    top: 0;
     width: 30%;
     height: max-content;
     overflow: auto;
     background-color: rgb(77, 76, 76);
     color: white;
     padding: 2rem;
+    margin-top: 22rem;
+    margin-left: 0.5rem;
 }
 /*Closing span*/
 .Close{
@@ -105,4 +107,14 @@ textarea{
 }
 .modal-add:hover{
     background-color: rgb(139, 137, 137);
+}
+h6{
+    color: black;
+    margin: 0;
+}
+.taskDisplay{
+    border: solid rgb(204, 200, 200) 3px;
+    margin-top: 1rem;
+    text-align: left;
+    padding: 10px;
 }
