@@ -41,6 +41,24 @@ app.get('/', (req, res) => {
          const tasks = db.prepare(query).all();
   res.json({tasks: tasks})
 })
+//post
+app.post('/tasks', (req, res) => {
+  const { task, task_description } = req.body;
+  if (!task || !task_description) {
+    return res.status(400).json({ error: 'Task and Task Description are required' });
+  }
+
+  try {
+    const insertQuery = db.prepare("INSERT INTO tasks (task, task_description) VALUES (?, ?)");
+    const result = insertQuery.run(task, task_description);
+    const newTask = db.prepare('SELECT * FROM tasks WHERE id = ?').get(result.lastInsertRowid);
+
+    res.status(201).json(newTask);
+  } catch (error) {
+    console.error('Error inserting task:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

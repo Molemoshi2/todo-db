@@ -10,6 +10,10 @@ function Home(){
    const [mylist,setMylist] = useState([])
    const [task,setTask] = useState('')
    const [task_description,setTask_description] = useState('')
+   const [post,setPost]= useState({
+    task:task,
+    task_description:task_description
+   })
 
     
     const fetchfunc = async () =>
@@ -28,6 +32,15 @@ function Home(){
         }
     
     }
+    // handle input data
+    const handleInputtask = (event)=>{
+        console.log(event.target.value);
+        setTask(event.target.value);  
+    }
+    const handleInputdesc = (event)=>{
+        setTask_description(event.target.value);
+        console.log(task_description)
+    }
     // add to the api
     const addtodo = async()=>{
         if (task.trim()=='' || task_description.trim()==''){
@@ -35,12 +48,12 @@ function Home(){
             return;
         }
         try{
-            await axios.post(API.baseURL, {task,task_description});
+            await API.post(('/'), {task,task_description});
             setTask('');
             setTask_description('');
             fetchfunc();
         }catch(err){
-            console.err('Error adding todo',err);
+            console.error('Error adding todo',err);
         }
     };
     function handleopenModal(){
@@ -77,16 +90,16 @@ function Home(){
                         <span className="Close" onClick={handleCloseModal}>X</span>
                     </div> 
                     <form action="" className="modal-form">
-                        <input type="text" className="modal-input" placeholder="Task Name"/>
+                        <input type="text" className="modal-input" placeholder="Task Name" name="newtask" onChange={handleInputtask}/>
                         <select name="" id="">
                             <option value="">Select Priority</option>
                             <option value="">Low</option>
                             <option value="">Medium</option>
                             <option value="">High</option>
                         </select><br /><br />
-                        <textarea name="" id="" placeholder="Task Description"></textarea>
+                        <textarea name="" id="" placeholder="Task Description" onChange={handleInputdesc}></textarea>
                     </form>
-                    <button className="modal-add" onClick={fetchfunc} >Add</button>
+                    <button className="modal-add" onClick={addtodo} >Add</button>
                 </div>
             </div>
         </div>
