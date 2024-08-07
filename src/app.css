@@ -118,3 +118,139 @@ h6{
     text-align: left;
     padding: 10px;
 }
+
+.taskDisplay#Low
+{
+    border-color: green;
+}
+.taskDisplay#Medium
+{
+    border-color: yellow;
+}
+.taskDisplay#High
+{
+    border-color: red;
+}
+
+/*styling the log in and register*/
+h1{
+    margin-top: 5rem;
+    text-align: center;
+    color: teal;
+    letter-spacing: 5px;
+    font-size: 3rem;
+
+}
+h2{
+    margin-bottom: 3rem;
+    letter-spacing: 4px;
+    color: teal;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.Mini-Main{
+    text-align: center;
+    margin-top: 4rem;
+    border: teal solid 2px;
+    padding: 5rem;
+    margin-top: 8rem;
+    width: 48%;
+    margin-left: 23%;
+    box-shadow: black 3px 3px 3px;
+    
+   
+}
+input{
+    width: 50%;
+    height: 3rem;
+    border: solid teal 2px;
+    padding-left: 1rem;
+    box-shadow: black 2px 2px 2px;
+}
+
+
+.login-btn{
+    background-color: teal;
+    height: 3rem;
+    width: 50%;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 8px;
+    font-weight: 600;
+    box-shadow: black 3px 3px 3px;
+}
+
+.signUp{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.login-link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.mini{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 1%;
+}
+.add{
+    background-color: teal;
+    color: white;
+    border: none;
+    width: 3rem;
+    box-shadow: black 3px 3px 3px;
+}
+/*styling the input task div*/
+.inputTask{
+    height: 3rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    text-align: center;
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    gap: 50%;
+    margin-left: 5rem;
+    
+}
+/*styling the div with crud button*/
+
+.delete-btn{
+    background-color: teal;
+    border: none;
+    color: white;
+    width: 4rem;
+    height: 3.3rem;
+    box-shadow: black 3px 3px 3px;
+}
+.span-container{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.button-container{
+    display: flex;
+    gap: 5%;
+    
+}
+.TaskDisplay{
+    font-size: 1.4rem;
+    width: 13rem;
+    border: none;
+    color: rgb(66, 65, 65);
+    font-weight: 600;
+
+}
+
+/* styling span showing errors*/
+li{
+    list-style-type: none;
+}
