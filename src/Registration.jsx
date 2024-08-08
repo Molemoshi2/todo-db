@@ -74,18 +74,18 @@ function Register(){
         <form action="" className="Mini-Main" onSubmit={handleButtonClick}>
             <h2>Sign Up</h2>
             
-                <input type="email" placeholder="Enter Email" style={errorSpan} onChange={handleChangeEmail}/>
+                <input className="input-input" type="email" placeholder="Enter Email" style={errorSpan} onChange={handleChangeEmail}/>
                 
                 <br /><span style={errormsg}>Invalid Email</span><br />
 
                 <br /><br />
-                <input type="text" placeholder="Create new Password" style={errorSpan} onChange={handleChangePassword} />
+                <input className="input-input" type="text" placeholder="Create new Password" style={errorSpan} onChange={handleChangePassword} />
                 <br /> <span style={errormsg}>Password should contain more than 6 characters</span><br />
                 <br /><br />
-                <input type="text" placeholder="Confirm password" style={errorSpan} onChange={handleConfirmPassword} /><br />
+                <input className="input-input" type="text" placeholder="Confirm password" style={errorSpan} onChange={handleConfirmPassword} /><br />
                 <span style={errormsg}>password should match</span><br />
 
-                <Link className='login-link' to={'/LogIn'} onClick={handleButtonClick} ><button type="submit" className="login-btn">Sign Up</button></Link>
+                <Link className='login-link' to={'/Home'} onClick={handleButtonClick} ><button type="submit" className="login-btn">Sign Up</button></Link>
         </form >
         
     </div>

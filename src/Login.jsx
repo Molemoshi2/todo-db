@@ -65,11 +65,11 @@ function LogIn(){
             
                 <form action="" >
                     <br /><br />
-                    <input type="email"  required placeholder="Enter Email" style={errorSpan} onChange={handleUserEmail} />
+                    <input type="email" className="input-input" required placeholder="Enter Email" style={errorSpan} onChange={handleUserEmail} />
                     <br /><span style={errormsg}>{errors.email}</span><br />
 
                     <br /><br />
-                    <input style={errorSpan} type="password" placeholder="Enter Password" onChange={handleUserPassword} /><br />
+                    <input style={errorSpan} className="input-input" type="password" placeholder="Enter Password" onChange={handleUserPassword} /><br />
                     <span style={errormsg}>{errors.email}</span><br />
 
                     <Link to={'/Home'} className="login-link" onClick={handleFormSubmit}><button type="submit" className="login-btn" >login</button></Link>

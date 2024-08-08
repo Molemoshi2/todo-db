@@ -6,7 +6,7 @@
 .mini-container{
     border: solid rgb(194, 190, 190) 2px;
     padding: 6rem;
-    height: 40rem;
+    height: 60rem;
     margin-top: 2rem;
 }
 hr{
@@ -161,13 +161,6 @@ h2{
     
    
 }
-input{
-    width: 50%;
-    height: 3rem;
-    border: solid teal 2px;
-    padding-left: 1rem;
-    box-shadow: black 2px 2px 2px;
-}
 
 
 .login-btn{
@@ -253,4 +246,11 @@ input{
 /* styling span showing errors*/
 li{
     list-style-type: none;
+}
+
+/* styling login inputs */
+.input-input{
+    height: 2rem;
+    width: 100%;
+    border-color: teal;
 }
